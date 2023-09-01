@@ -19,8 +19,8 @@ jobs:
       postgres:
         image: postgres:14-alpine
         env:
-          POSTGRES_USER: root
-          POSTGRES_PASSWORD: secret
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: Edward@2602!
           POSTGRES_DB: simple_bank
         ports:
           - 5432:5432
