@@ -1,5 +1,5 @@
-### Send POST request with json body
-POST http://localhost:8080/transfers
+### Create a transfers
+POST {{URL_END_POINT}}/transfers
 Content-Type: application/json
 
 {
@@ -7,4 +7,13 @@ Content-Type: application/json
   "to_account_id": 2,
   "amount": 100,
   "currency": "CAD"
+}
+
+### Create a transfers
+POST {{URL_END_POINT}}/accounts
+Content-Type: application/json
+
+{
+  "owner": "wpcsjp",
+  "currency": "EUR"
 }
