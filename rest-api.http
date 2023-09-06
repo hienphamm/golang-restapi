@@ -17,3 +17,14 @@ Content-Type: application/json
   "owner": "wpcsjp",
   "currency": "EUR"
 }
+
+### Create an user
+POST {{URL_END_POINT}}/users
+Content-Type: application/json
+
+{
+  "username": "Hien3",
+  "full_name": "Hien Pham",
+  "email": "hien3@gmail.com",
+  "password": "secret"
+}
