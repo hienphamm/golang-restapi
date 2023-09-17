@@ -1,17 +1,19 @@
 ### Create a transfers
 POST {{URL_END_POINT}}/transfers
 Content-Type: application/json
+Authorization: bearer v2.local.DPxunZTRV4f0ySE4w_6DYKOCTmq8xUcXHdA8h7NR-Bg7G8ME1F_oT4z6nE9lXuFbQqArWkAq7ed4pKB7dNts3Ax3a7_SZ6Rc5sZXVccoMkaFRsRTJFfngwhBKcxkc0eBi1A6S5rvr46Z153daGHKUU53qvH1QCLtic0vQdyN5w2jg-aNjnT0o5WyImA0gKPfUoMhD2tSHgkg0-fBAvgVl5z_TUPD0BWs5Ka2B1dCJBH7en7VB6xDxG_ilrpzhbxWMdu0JIs.bnVsbA
 
 {
-  "from_account_id": 1,
-  "to_account_id": 2,
+  "from_account_id": 30,
+  "to_account_id": 49,
   "amount": 100,
-  "currency": "CAD"
+  "currency": "EUR"
 }
 
-### Create a transfers
+### Create an account
 POST {{URL_END_POINT}}/accounts
 Content-Type: application/json
+Authorization: bearer v2.local.DPxunZTRV4f0ySE4w_6DYKOCTmq8xUcXHdA8h7NR-Bg7G8ME1F_oT4z6nE9lXuFbQqArWkAq7ed4pKB7dNts3Ax3a7_SZ6Rc5sZXVccoMkaFRsRTJFfngwhBKcxkc0eBi1A6S5rvr46Z153daGHKUU53qvH1QCLtic0vQdyN5w2jg-aNjnT0o5WyImA0gKPfUoMhD2tSHgkg0-fBAvgVl5z_TUPD0BWs5Ka2B1dCJBH7en7VB6xDxG_ilrpzhbxWMdu0JIs.bnVsbA
 
 {
   "owner": "wpcsjp",
