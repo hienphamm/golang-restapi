@@ -23,7 +23,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         with:
           mask-password: 'true'
-          aws-region: ap-southeast-1
+          registry-type: 'private'
 
       - name: Build, tag, and push docker image to Amazon ECR
         env:
