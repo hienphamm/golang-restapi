@@ -8,6 +8,7 @@ import (
 	db "github.com/hienphamm/simplebank/db/sqlc"
 	"github.com/hienphamm/simplebank/token"
 	"github.com/hienphamm/simplebank/util"
+	"net/http"
 )
 
 type Server struct {
@@ -31,7 +32,10 @@ func NewServer(config util.Config, store db.Store) (*Server, error) {
 	}
 
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		v.RegisterValidation("currency", validCurrency)
+		err := v.RegisterValidation("currency", validCurrency)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	server.setupRouter()
@@ -40,6 +44,12 @@ func NewServer(config util.Config, store db.Store) (*Server, error) {
 
 func (server *Server) setupRouter() {
 	router := gin.Default()
+
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
+		})
+	})
 
 	router.POST("/users", server.createUser)
 	router.POST("/users/login", server.loginUser)
